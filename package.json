@@ -1,0 +1,55 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "scripts": {
+    "build": "npm run build:css && remix build",
+    "build:css": "tailwindcss -m -i ./styles/app.css -o app/styles/app.css",
+    "dev": "concurrently \"npm run dev:css\" \"remix dev\"",
+    "dev:css": "tailwindcss -w -i ./styles/app.css -o app/styles/app.css",
+    "start": "remix-serve build",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "@heroicons/react": "^2.0.8",
+    "@prisma/client": "^4.2.1",
+    "@remix-run/node": "^1.6.8",
+    "@remix-run/react": "^1.6.8",
+    "@remix-run/serve": "^1.6.8",
+    "@sanity/client": "^3.3.3",
+    "@sanity/image-url": "^1.0.1",
+    "bcryptjs": "^2.4.3",
+    "groq": "^2.29.3",
+    "lodash": "^4.17.21",
+    "lodash.throttle": "^4.1.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-portal": "^4.2.2",
+    "sanity": "^3.0.0-dev-preview.15",
+    "zustand": "^4.1.1"
+  },
+  "devDependencies": {
+    "@remix-run/dev": "^1.6.8",
+    "@remix-run/eslint-config": "^1.6.8",
+    "@types/bcryptjs": "^2.4.2",
+    "@types/lodash.throttle": "^4.1.7",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "@types/react-portal": "^4.0.4",
+    "autoprefixer": "^10.4.8",
+    "concurrently": "^7.3.0",
+    "eslint": "^8.20.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.30.0",
+    "postcss": "^8.4.16",
+    "prettier": "^2.7.1",
+    "prettier-plugin-tailwindcss": "^0.1.11",
+    "prisma": "^4.2.1",
+    "tailwindcss": "^3.1.8",
+    "typescript": "^4.7.4"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}

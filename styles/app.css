@@ -1,0 +1,78 @@
+@font-face {
+  font-family: "Brandon Grotesque";
+  font-weight: theme("fontWeight.black");
+  font-display: swap;
+  src: url("/fonts/BrandonGrotesque-Black.woff2");
+}
+
+@font-face {
+  font-family: "Tisa";
+  font-weight: theme("fontWeight.thin");
+  font-display: swap;
+  src: url("/fonts/ff-tisa-web-pro-thin.woff2");
+}
+
+@font-face {
+  font-family: "Tisa";
+  font-weight: theme("fontWeight.normal");
+  font-display: swap;
+  src: url("/fonts/ff-tisa-web-pro-light.woff2");
+}
+
+@font-face {
+  font-family: "Domaine";
+  font-weight: theme("fontWeight.normal");
+  font-display: swap;
+  src: url("/fonts/DomaineTextWeb-Regular.woff2");
+}
+
+@font-face {
+  font-family: "Domaine";
+  font-weight: theme("fontWeight.normal");
+  font-style: italic;
+  font-display: swap;
+  src: url("/fonts/DomaineTextWeb-RegularItalic.woff2");
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: theme("spacing.8");
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  -ms-font-feature-settings: "kern" 1;
+  font-feature-settings: "kern";
+}
+
+a {
+  @apply transition-colors duration-200 ease-out;
+}
+
+.banner {
+  background-color: theme("colors.caramel.100");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23e9d4c3' fill-opacity='1'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+@screen md {
+  .banner h1 {
+    -webkit-text-stroke: 1px theme("colors.caramel.800");
+    color: theme("colors.caramel.100");
+    text-shadow: 3px 3px 0 theme("colors.caramel.800"),
+      -1px -1px 0 theme("colors.caramel.800"),
+      1px -1px 0 theme("colors.caramel.800"),
+      -1px 1px 0 theme("colors.caramel.800"),
+      1px 1px 0 theme("colors.caramel.800");
+  }
+}
+
+.label {
+  @apply font-display text-2xs tracking-mega font-black uppercase;
+}

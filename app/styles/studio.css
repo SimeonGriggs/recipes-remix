@@ -1,0 +1,22 @@
+/* Outermost wrapper of studio */
+#sanity-studio,
+#sanity-studio > div {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+}
+
+div[data-ui="ToolScreen"],
+div[data-ui="PaneLayout"] {
+  min-height: 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+  #sanity-studio > div {
+    --card-bg-color: #101112;
+    --card-fg-color: #fff;
+  }
+}
